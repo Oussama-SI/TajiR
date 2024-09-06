@@ -1,0 +1,33 @@
+# presentation.kv
+
+<PresentationScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: [20, 50]
+        spacing: 20
+
+        Image:
+            source: 'logo.png'  # Add your logo image here
+            size_hint: (0.6, 0.6)
+            pos_hint: {'center_x': 0.5}
+
+        Label:
+            text: 'Welcome to TaJiR'
+            font_size: '28sp'
+            bold: True
+            color: 0, 0.5, 0.7, 1
+            halign: 'center'
+
+        Label:
+            text: 'Your B2B e-commerce platform for grocery stores'
+            font_size: '18sp'
+            halign: 'center'
+
+        Button:
+            text: 'Start'
+            font_size: '20sp'
+            size_hint: (0.6, 0.2)
+            pos_hint: {'center_x': 0.5}
+            background_color: 0, 0.7, 0.4, 1
+            on_release: app.switch_to_main_screen()
+
